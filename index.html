@@ -1,0 +1,147 @@
+<html>
+<head>
+    <body>
+        <div>
+            <h1>  Teste </h1>            
+        </div>
+        <script>
+            var nome = "Ricardo"
+            nome = "Augusto"
+
+            //Vetor
+            var alunos = ['Ricardo', 'Reinan', 'Rayan'];
+
+            //Objeto = guarda mais de um valor
+            var aluno = {
+                nome: alunos[1],//Buscando aluno dentro do vetor alunos
+                nome: 'Ricardo',
+                idade: 37,
+                peso: 73.5,
+                homem: true
+            }
+                 console.log(alunos);
+                 console.log(alunos[1]);//passando direto do vetor
+
+                 console.log(aluno);
+                 console.log(aluno.idade);
+            
+            //Operações Matemáticas
+            var x = 10;//  ou var = x , y = 5 , z = "16";
+            var y = 5;
+            var z = "16";
+
+                console.log(x, y, z);
+
+            var resultado = x + y;
+
+                console.log(resultado);
+
+            x = x + 3; //ou x += 3;
+
+                console.log(x);
+
+            //Funções var só é visivel dentro da funcção
+            function soma(numero1, numero2){
+                    var resultado = numero1 + numero2;
+                    
+                    return resultado;
+            }
+
+            var resultado = soma(1, 2);// passando o valor do parametro
+                console.log(resultado);
+
+            //Condicionais if/else
+            function retornaSexo(sexo){
+                    //M, F
+                    //Masculino, Feminino
+                if (sexo == 'M') {//ou === pra verificar valor e tipo
+                    return 'Masculino';        
+                } else if (sexo === 'F') {
+                    return 'Femino';
+                }else {
+                    return 'Outro';
+                }  
+            }
+
+            var resultado = retornaSexo('M');
+                console.log(resultado);
+
+            //Condicionais com swiftcase
+            function retornaSexoCase(sexo){
+                    //M, F
+                    //Masculino, Feminino
+                switch (sexo) {
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'Outro';    
+                }
+            }
+
+            var resultado = retornaSexoCase('F');
+                console.log(resultado);
+
+            //Operadores Lógicos
+            // AND = &&, OR = ||, NOT = != ou !== valor e tipo
+            var sexo = 'M' , idade = 10;
+
+            if (sexo === 'M' || idade >= 18) {
+                console.log('OK');
+            }
+
+            var sexo1 = 'F';
+
+            if (sexo1 !== 'M'){
+                console.log('OK1');
+            }
+
+            //Armazenando o valor da condição
+            var masculino;
+
+            if (sexo === 'M') {
+                masculino = true;
+            } else {
+                masculino = false;
+            }
+
+            console.log(masculino);
+            //Declarando na mesma linha
+            var sexo = 'M';
+
+            var feminino = sexo === 'F';
+                console.log(feminino);
+
+            //Condição tenéria
+            var sexo = 'M';
+
+            //reduzindo
+            var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+                console.log(retorno);
+
+            //For  sempre que souber o tamanho do intervalo
+            for (var i = 0; i <= 100; i++) {
+                console.log(i);
+            }
+
+            //While sempre que não souber o tamanho do intervalo
+            var j = 2203030;
+
+            while (j > 50) {
+                console.log(j);
+
+                j /=5;
+            }
+
+            //Intervalo
+            function exibeAlgo() {
+                console.log('Hello world');
+            }
+
+                //setInterval(exibeAlgo, 1000);//exibe várias vezes a cada segudno e passa a função como parametro
+                setTimeout(exibeAlgo, 5000); // executa apenas uma vez apos segundo
+        </script>
+    </body>
+</head>
+</html>
